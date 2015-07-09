@@ -22,14 +22,13 @@
             console.log($(window.parent.document)); 
             console.log($(window.parent.document).find('.send.primary'));
             Front.setPanelWidth(150);
-            Front.prompt({
-              title: 'Title of the confirm dialog',
-              message: 'Body of the dialog.',
-              okTitle: 'Label of the OK button (optional)',
-              cancelTitle: 'Label of the OK button (optional)'  
-            }, function (val) {
-              console.log('User entered:', val);
-            });
+            function reply() {
+              Front.reply({
+                
+              }, false, conversation);
+            }
+
+
         })
     </script>
 </body>
